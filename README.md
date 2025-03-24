@@ -16,26 +16,36 @@ After getting the repo, to synchronize the executable environment and obtain the
 uv sync
 ```
 
+After syncthing, it is necessary to place the execution interpreter into the `.venv` environment, either by **selecting it** from our preferred code editor (Visual Studio Code) or by **activating it** through the terminal with `.venv\Scripts\activate`
+
 Then, to execute and obtain the results of the project, through the command line, we simply run:
 
 ```
-python main.py
+python main.py iws --output-dir=x --imgs-limit=x
 ```
 
-**Note** that it is possible to modify the following parameter values as needed from `main.py`:
+**Note** that it is possible to assign the parameter values as needed from the command execution by replacing `x`:
 
-* `output_dir_name`
-* `imgs_limit`
+* `--output-dir` : Output directory name.
+* `--imgs-limit` : Total limit of images to download.
 
 # Considerations
-If you do not modify the values or delete the following parameters, by default, you will get the following results:
+If you do not assign parameter values, by default, you will get the following results:
 
-* `output_dir_name = "IWS_Results"`
-* `imgs_limit = 3`
+* `--output-dir = IWS_Results`
+* `--imgs-limit = 3`
 
 # References and credits
-## Videos
+## v0.1.0
+### Videos
 * [How to Scrape Images from a Website with Python (beautiful soup tutorial)](https://www.youtube.com/watch?v=NcsiXa_74jM&ab_channel=TonyTeachesTech)
     * From [Tony Teaches Tech](https://www.youtube.com/@TonyTeachesTech)
-## Websites
+### Websites
 * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find)
+## v0.2.0
+### Videos
+* [Write powerful CLIs in Python with Typer - Design Patterns](https://www.youtube.com/watch?v=qynsLmCEwhs&ab_channel=Patternite)
+    * From [Patternite](https://www.youtube.com/@patternite538)
+### Websites
+* [Typer Documentation](https://typer.tiangolo.com/)
+* [Typer One Command Help](https://github.com/fastapi/typer/discussions/937#discussioncomment-10376326)

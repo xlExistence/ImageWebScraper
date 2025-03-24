@@ -9,12 +9,12 @@ from utils.utils import (
 OUTPUT_DIR = "output"
 
 class ImageWebScraper:
-    def __init__(self, output_dir_name: str = "IWS_Results"):
+    def __init__(self, output_dir_name: str):
         self.output_dir_name = output_dir_name
         self.output_dir_path = os.path.join(OUTPUT_DIR, output_dir_name)
         create_required_output_folder(self.output_dir_path)
 
-    def getFromURL(self, URL, imgs_limit = 3):
+    def getFromURL(self, URL: str, imgs_limit: int):
         headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"}
         r = requests.get(url=URL, headers=headers)
         soup = BeautifulSoup(r.content, 'html.parser')
