@@ -1,0 +1,10 @@
+[project]
+name = "ImageWebScraper"
+version = "0.1.0"
+description = "This code is dedicated to the develop of a python tool that will be used to perform web scraping to an Amazon site, from which we can take the images and save them in our device."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "requests>=2.32.3",
+]
